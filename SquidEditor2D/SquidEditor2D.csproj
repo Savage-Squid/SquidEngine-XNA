@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E61D439-059C-4344-8B7C-12E420E6F230}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SquidEditor</RootNamespace>
+    <AssemblyName>SquidEditor2D</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Engine" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XPTable">
+      <HintPath>..\..\..\..\..\..\..\Game Projects\SquidEngine\Milkshake\Lib\XPTable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultControlPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DefaultControlPanel.designer.cs">
+      <DependentUpon>DefaultControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlBool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlBool.designer.cs">
+      <DependentUpon>AutoControlBool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlByte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlByte.designer.cs">
+      <DependentUpon>AutoControlByte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlColor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlColor.designer.cs">
+      <DependentUpon>AutoControlColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlEnum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlEnum.designer.cs">
+      <DependentUpon>AutoControlEnum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlFloat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlFloat.designer.cs">
+      <DependentUpon>AutoControlFloat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlInt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlInt.designer.cs">
+      <DependentUpon>AutoControlInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlPoint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlPoint.designer.cs">
+      <DependentUpon>AutoControlPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlRectangle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlRectangle.Designer.cs" />
+    <Compile Include="Editors\Components\AutoControlString.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlString.Designer.cs" />
+    <Compile Include="Editors\Components\AutoControlVector2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editors\Components\AutoControlVector2.Designer.cs" />
+    <Compile Include="Editors\Components\GenericComponentControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\Components\GenericComponentControl.Designer.cs" />
+    <Compile Include="Editors\AnimatedSprites\AnimatedSpriteEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\AnimatedSprites\AnimatedSpriteEditor.designer.cs">
+      <DependentUpon>AnimatedSpriteEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\CompositeEntities\CompositeEntityEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\CompositeEntities\CompositeEntityEditor.designer.cs">
+      <DependentUpon>CompositeEntityEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\CompositeEntities\CompositeKeyFrameEditorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\LinearPropertyControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\Materials\MaterialEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\Materials\MaterialEditor.designer.cs">
+      <DependentUpon>MaterialEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\TileSheet\TileSheetEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\TileSheet\TileSheetEditor.designer.cs">
+      <DependentUpon>TileSheetEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\TileGrids\TileCopy.cs" />
+    <Compile Include="Editors\TileGrids\TileGridEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\TileGrids\TileGridEditor.designer.cs">
+      <DependentUpon>TileGridEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\TileGrids\TileGridEditorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\TileGrids\TileGridMinimapControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\TileGrids\TileSelectionControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\TextItems\TextItemControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\TextItems\TextItemEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\TextItems\TextItemEditor.designer.cs">
+      <DependentUpon>TextItemEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\PostProcessAnimations\PostProcessAnimationControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\PostProcessAnimations\PostProcessAnimationEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\PostProcessAnimations\PostProcessAnimationEditor.designer.cs">
+      <DependentUpon>PostProcessAnimationEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Sprites\SpriteEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\Sprites\SpriteEditor.designer.cs">
+      <DependentUpon>SpriteEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Sprites\SpriteEditorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\Particles\ParticleEffectControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\Particles\ParticleEffectEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\Particles\ParticleEffectEditor.designer.cs">
+      <DependentUpon>ParticleEffectEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\Particles\ShapeSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editors\Particles\ShapeSelection.designer.cs">
+      <DependentUpon>ShapeSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\ZoomBox.cs" />
+    <Compile Include="ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsDeviceControls\ContentBuilder.cs" />
+    <Compile Include="GraphicsDeviceControls\ErrorLogger.cs" />
+    <Compile Include="GraphicsDeviceControls\GraphicsDeviceControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphicsDeviceControls\GraphicsDeviceService.cs" />
+    <Compile Include="GraphicsDeviceControls\MaterialDisplayControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphicsDeviceControls\SceneEditorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphicsDeviceControls\SceneItemPreviewControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GraphicsDeviceControls\ServiceContainer.cs" />
+    <Compile Include="SquidEditorPreferences.cs" />
+    <Compile Include="SquidEditorSceneEditorTool.cs" />
+    <Compile Include="SquidProject.cs" />
+    <Compile Include="LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingForm.designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SquidEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SquidEditorForm.designer.cs">
+      <DependentUpon>SquidEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\SpriteInfo.cs" />
+    <Compile Include="Tools\SpriteSheetGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\SpriteSheetGenerator.designer.cs">
+      <DependentUpon>SpriteSheetGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SceneItemEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selectors\FontSelectorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selectors\FontSelectorDialog.designer.cs">
+      <DependentUpon>FontSelectorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selectors\MaterialSelectorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selectors\MaterialSelectorDialog.designer.cs">
+      <DependentUpon>MaterialSelectorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selectors\ProjectSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selectors\ProjectSettingsForm.designer.cs">
+      <DependentUpon>ProjectSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selectors\SceneItemTypeStruct.cs" />
+    <Compile Include="Selectors\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selectors\SettingsForm.designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selectors\TileSheetSelectorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selectors\TileSheetSelectorDialog.designer.cs">
+      <DependentUpon>TileSheetSelectorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SceneItemGroup.cs" />
+    <Compile Include="Wizards\NewSceneWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wizards\NewSceneWizard.designer.cs">
+      <DependentUpon>NewSceneWizard.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultControlPanel.resx">
+      <DependentUpon>DefaultControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Components\AutoControl.resx">
+      <DependentUpon>AutoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Components\AutoControlBool.resx">
+      <DependentUpon>AutoControlBool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Components\AutoControlByte.resx">
+      <DependentUpon>AutoControlByte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Components\AutoControlColor.resx">
+      <DependentUpon>AutoControlColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Components\AutoControlEnum.resx">
+      <DependentUpon>AutoControlEnum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Components\AutoControlFloat.resx">
+      <DependentUpon>AutoControlFloat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Components\AutoControlInt.resx">
+      <DependentUpon>AutoControlInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Components\AutoControlPoint.resx">
+      <DependentUpon>AutoControlPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Components\AutoControlRectangle.resx" />
+    <EmbeddedResource Include="Editors\Components\AutoControlString.resx" />
+    <EmbeddedResource Include="Editors\Components\AutoControlVector2.resx" />
+    <EmbeddedResource Include="Editors\Components\GenericComponentControl.resx" />
+    <EmbeddedResource Include="Editors\AnimatedSprites\AnimatedSpriteEditor.resx">
+      <DependentUpon>AnimatedSpriteEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\CompositeEntities\CompositeEntityEditor.resx">
+      <DependentUpon>CompositeEntityEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Materials\MaterialEditor.resx">
+      <DependentUpon>MaterialEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\TileSheet\TileSheetEditor.resx">
+      <DependentUpon>TileSheetEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\TileGrids\TileGridEditor.resx">
+      <DependentUpon>TileGridEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\TextItems\TextItemEditor.resx">
+      <DependentUpon>TextItemEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\PostProcessAnimations\PostProcessAnimationEditor.resx">
+      <DependentUpon>PostProcessAnimationEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Sprites\SpriteEditor.resx">
+      <DependentUpon>SpriteEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Particles\ParticleEffectEditor.resx">
+      <DependentUpon>ParticleEffectEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editors\Particles\ShapeSelection.resx">
+      <DependentUpon>ShapeSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SquidEditorForm.resx">
+      <DependentUpon>SquidEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\SpriteSheetGenerator.resx">
+      <DependentUpon>SpriteSheetGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selectors\FontSelectorDialog.resx">
+      <DependentUpon>FontSelectorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selectors\MaterialSelectorDialog.resx">
+      <DependentUpon>MaterialSelectorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selectors\ProjectSettingsForm.resx">
+      <DependentUpon>ProjectSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selectors\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selectors\TileSheetSelectorDialog.resx">
+      <DependentUpon>TileSheetSelectorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Wizards\NewSceneWizard.resx">
+      <DependentUpon>NewSceneWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SquidEngine2D\SquidEngine2D.csproj">
+      <Project>{D785CBB9-B3A9-4D3B-B42E-D649147D569C}</Project>
+      <Name>SquidEngine2D</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\check_green-small.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\checker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_swatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\cross.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\pivot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plugin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ppBackground.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sport_soccer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weather_lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weather_sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpriteFont.xml" />
+    <Content Include="Resources\x_red-small.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

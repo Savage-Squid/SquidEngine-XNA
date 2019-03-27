@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<SquidEngineProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>$safeprojectname$</Name>
+  <Description>$safeprojectname$</Description>
+  <VisualStudioProjectPath>$safeprojectname$.csproj</VisualStudioProjectPath>
+  <ContentFolderRelativePath>..\Content\SquidEngineAssets\</ContentFolderRelativePath>
+  <BinaryFolderRelativePath>bin\x86\Debug\</BinaryFolderRelativePath>
+  <LastOpenedScene></LastOpenedScene>
+</SquidEngineProject>
